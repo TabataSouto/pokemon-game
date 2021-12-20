@@ -7,14 +7,13 @@ body {
   background-color: rgb(209, 19, 19);
   display: flex;
   justify-content: center;
-  min-height:100vh;
+  min-height: 90vh;
   max-height: 50vh;
 }
 
 main {
   display: flex;
   max-width: 1000px;
-  margin: 10%;
 }
 
 #container-game {
@@ -77,13 +76,13 @@ main {
 
 #restart {
   background-color: rgb(255, 209, 57);
+  width: 100%;
   border: 2mm ridge rgba(54, 91, 212, 0.822);
   padding: 1%;
   text-transform: uppercase;
-  margin-left: 1%;
-  margin-top: 4%;
+  margin-top: 14%;
 }
 
 #restart:hover {
-  cursor: progress;
+  cursor: pointer;
 }

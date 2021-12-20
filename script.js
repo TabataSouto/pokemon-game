@@ -3,6 +3,7 @@ const start = document.querySelector('#start');
 const buttonStart = document.querySelector('#button');
 const game = document.querySelector('#game');
 const answers = document.querySelector('#answers');
+const restart = document.querySelector('#restart');
 
 // iniciar o jogo;
 start.addEventListener('click', () => {
@@ -23,22 +24,20 @@ function addItems(ans1, ans2, ans3, name, img) {
 }
 addItems('Pikachu', 'Zubat', 'Wanriky', 'Pikachu', 'images/pikachu-sombra.png');
 
-// opções de pokemon;
-addItems('Pikachu', 'Zubat', 'Wanriky', 'Pikachu', 'images/pikachu-sombra.png');
-addItems('Pikachu', 'Zubat', 'Wanriky', 'Pikachu', 'images/pikachu-sombra.png');
-addItems('Pikachu', 'Zubat', 'Wanriky', 'Pikachu', 'images/pikachu-sombra.png');
-addItems('Pikachu', 'Zubat', 'Wanriky', 'Pikachu', 'images/pikachu-sombra.png');
-
 // jogo;
 answers.addEventListener('click', selectedAnswer);
 
-function selectedAnswer(event){
+function selectedAnswer(event, img){
   const click = event.target.innerText;
   const pokemon = document.querySelector('#pokemon');
   const correctAnswer = document.querySelector('#text');
   if (click === correctAnswer.innerText) {
     pokemon.src = './images/pikachu.png';
+    restart.style.display = 'block';
   }
 }
 
 // próximo pokemon;
+// restart.addEventListener('click', () => {
+//   addItems('Pikachu', 'Zubat', 'Eve', 'Pikachu', 'images/eve-sombra.jpg');
+// });
