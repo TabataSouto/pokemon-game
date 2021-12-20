@@ -4,5 +4,86 @@
 }
 
 body {
-  background-color: red;
+  background-color: rgb(209, 19, 19);
+  display: flex;
+  justify-content: center;
+  min-height:100vh;
+  max-height: 50vh;
+}
+
+main {
+  display: flex;
+  max-width: 1000px;
+  margin: 10%;
+}
+
+#container-game {
+  background-image: url('./images/img-game-main.png');
+  background-size: cover;
+  height: 60vh;
+  width: 100vh;
+  align-self: center;
+}
+
+#answers {
+  display: flex;
+  width: 50%;
+  justify-content: space-evenly;
+}
+
+#answers > p {
+  background-color: rgb(255, 209, 57);
+  border: 2mm ridge rgba(54, 91, 212, 0.822);
+  padding: 2%;
+  margin-top: 10%;
+  margin-left: 10%;
+}
+
+#answers > p:hover {
+  cursor: pointer;
+}
+
+/* #game {
+  display: none;
+} */
+
+#result > img {
+  max-width: 30%;
+  margin-left: 15%;
+  margin-top: 5%;
+}
+
+#text {
+  display: none;
+}
+
+/* #button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 60%;
+  min-height: 60vh;
+}
+
+#start {
+  padding: 3%;
+  background-color: black;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-size: 18px;
+  color: white;
+} */
+
+#restart {
+  background-color: rgb(255, 209, 57);
+  border: 2mm ridge rgba(54, 91, 212, 0.822);
+  padding: 1%;
+  text-transform: uppercase;
+  margin-left: 1%;
+  margin-top: 4%;
+}
+
+#restart:hover {
+  cursor: progress;
 }
