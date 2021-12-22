@@ -41,8 +41,8 @@ const pokemons = [{
 },
 {
   name: 'Psyduck',
-  img: '/images/psyduck.png',
-  shadow: '/images/psyduck-sombra.png',
+  img: './images/psyduck.png',
+  shadow: './images/psyduck-sombra.png',
 },
 {
   name: 'Riolu',
@@ -56,7 +56,6 @@ const pokemons = [{
 ];
 
 // -----------------------------------------------------------------
-
 // constantes globais;
 const imgPokemon = document.querySelector('#pokemon')
 const input = document.querySelector('#answer');
@@ -87,11 +86,11 @@ randomPokemon();
 const sendButton = document.querySelector('#send');
 
 sendButton.addEventListener('click', () => {
-  if (input.value === (pokemons[0].name).toLowerCase().toUpperCase()) {;
+  if (input.value === (pokemons[0].name).toLowerCase()) {;
     imgPokemon.src = pokemons[0].img;
     restart.innerText = 'Parabéns! Vamos para o próximo Pokemon?';
   }
-  else if (input.value === (pokemons[1].name).toLowerCase().toUpperCase()) {;
+  else if (input.value === (pokemons[1].name).toLowerCase()) {;
     imgPokemon.src = pokemons[1].img;
     restart.innerText = 'Parabéns! Vamos para o próximo Pokemon?';
   }
@@ -99,31 +98,31 @@ sendButton.addEventListener('click', () => {
     imgPokemon.src = pokemons[2].img;
     restart.innerText = 'Parabéns! Vamos para o próximo Pokemon?';
   } 
-  else if (input.value === (pokemons[3].name).toLowerCase().toUpperCase()) {;
+  else if (input.value === (pokemons[3].name).toLowerCase()) {;
     imgPokemon.src = pokemons[3].img;
     restart.innerText = 'Parabéns! Vamos para o próximo Pokemon?';
   }
-  else if (input.value === (pokemons[4].name).toLowerCase().toUpperCase()) {;
+  else if (input.value === (pokemons[4].name).toLowerCase()) {;
     imgPokemon.src = pokemons[4].img;
     restart.innerText = 'Parabéns! Vamos para o próximo Pokemon?';
   }
-  else if (input.value === (pokemons[5].name).toLowerCase().toUpperCase()) {;
+  else if (input.value === (pokemons[5].name).toLowerCase()) {;
     imgPokemon.src = pokemons[5].img;
     restart.innerText = 'Parabéns! Vamos para o próximo Pokemon?';
   }
-  else if (input.value === (pokemons[6].name).toLowerCase().toUpperCase()) {;
+  else if (input.value === (pokemons[6].name).toLowerCase()) {;
     imgPokemon.src = pokemons[6].img;
     restart.innerText = 'Parabéns! Vamos para o próximo Pokemon?';
   }
-  else if (input.value === (pokemons[7].name).toLowerCase().toUpperCase()) {;
+  else if (input.value === (pokemons[7].name).toLowerCase()) {;
     imgPokemon.src = pokemons[7].img;
     restart.innerText = 'Parabéns! Vamos para o próximo Pokemon?';
   }
-  else if (input.value === (pokemons[8].name).toLowerCase().toUpperCase()) {;
+  else if (input.value === (pokemons[8].name).toLowerCase()) {;
     imgPokemon.src = pokemons[8].img;
     restart.innerText = 'Parabéns! Vamos para o próximo Pokemon?';
   }
-  else if (input.value === (pokemons[9].name).toLowerCase().toUpperCase()) {;
+  else if (input.value === (pokemons[9].name).toLowerCase()) {;
     imgPokemon.src = pokemons[9].img;
     restart.innerText = 'Parabéns! Vamos para o próximo Pokemon?';
   }
@@ -139,6 +138,6 @@ nextRestar.addEventListener('click', () => {
   randomPokemon();
   restart.style.color = 'black';
   restart.style.fontWeight = '0';
-  restart.innerText = 'Então, qual é o Pokemon?';
+  restart.innerText = 'Qual é o Pokémon?';
   input.value = '';
 });
