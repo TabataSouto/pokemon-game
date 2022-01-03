@@ -20,13 +20,13 @@ addShadow();
 
 // ------------------ Acertou ou Errou --------------------
 send.addEventListener('click', () => {
-  if (answer.value === pokemons[0].name.toUpperCase()) {
+  if (answer.value === pokemons[0].name.toLowerCase()) {
     pokemon.src = pokemons[0].img;
-    restartNext.innerText = 'Acertou!! Vamos para o próximo Pokemon?'
+    restartNext.innerText = 'Acertou!! Vamos para o próximo Pokémon?'
   } else {
     pokemon.src = 'https://i.postimg.cc/GmfBR00G/pokemon-cry.png';
     pokemon.style.width = '31.8%'
-    restartNext.innerText = 'Errado!! Tente novamente.';
+    restartNext.innerText = 'Errado!! Tente novamente ';
     restartNext.style.color = 'rgb(209, 19, 19)';
   }
 })
