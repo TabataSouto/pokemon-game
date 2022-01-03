@@ -52,10 +52,6 @@ main {
   font-weight: 800;
 }
 
-#game {
-  display: none;
-}
-
 #result > img {
   max-width: 30%;
   margin-left: 15%;
@@ -63,20 +59,25 @@ main {
   margin-bottom: 14.4%;
 }
 
-#text {
-  display: none;
-}
-
-#button {
+/* #button {
   display: flex;
   justify-content: center;
   align-items: center;
   max-width: 60%;
   min-height: 60vh;
+} */
+
+#start-game {
+  max-width: 20%;
+  margin-top: 6cm;
+  margin-left: 5cm;
 }
 
-#start {
-  position: absolute;
+#start-game:hover {
+  cursor: pointer;
+}
+
+/* .input-style {
   padding: 1%;
   border: none;
   border-radius: 5px;
@@ -84,19 +85,15 @@ main {
   font-size: 16px;
   border: 2mm ridge rgba(51, 96, 243, 0.822);
   background-color: rgb(255, 209, 57);
-}
+} */
 
-#start:hover {
-    cursor: pointer;
-}
-
-#restart {
+/* #restart {
   background-color: rgb(255, 209, 57);
   width: 100%;
   border: 2mm ridge rgba(51, 96, 243, 0.822);
   padding: 1%;
   text-transform: uppercase;
-  /* margin: 1% 0; */
+  margin: 1% 0; 
 }
 
 #restart:hover {
@@ -105,4 +102,8 @@ main {
 
 input:focus{
   outline: none;
+} */
+
+#game {
+  display: none;
 }
