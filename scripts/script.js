@@ -10,7 +10,7 @@ startGame.addEventListener('click', () => {
 // ------------- Adição da imagem sombra ------------
 function addShadow() {
   const pokemon = document.querySelector('#pokemon');
-  pokemon.src = '/images/minun-sombra.png'
+  pokemon.src = 'https://i.postimg.cc/k5t2Xj9Z/minun-sombra.png'
 }
 addShadow();
 
@@ -20,6 +20,6 @@ const send = document.querySelector('#send');
 
 send.addEventListener('click', () => {
   if (answer.value === 'Minun'.toLowerCase()) {
-    pokemon.src = '/images/minun.png';
+    pokemon.src = 'https://i.postimg.cc/cHyrKQLJ/minun.png';
   }
 })
