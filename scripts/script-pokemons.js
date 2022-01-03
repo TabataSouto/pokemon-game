@@ -48,8 +48,4 @@ const pokemons = [{
   img: '/images/riolu.png',
   shadow: '/images/riolu-sombra.png',
 },
-{
-  name: 'Pokemon Chorando',
-  img: '/images/pokemon-cry.png',
-},
 ];
