@@ -20,6 +20,7 @@ const send = document.querySelector('#send');
 
 send.addEventListener('click', () => {
   if (answer.value === 'Minun'.toLowerCase()) {
+    const pokemon = document.querySelector('#pokemon');
     pokemon.src = 'https://i.postimg.cc/cHyrKQLJ/minun.png';
   }
 })
