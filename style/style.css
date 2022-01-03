@@ -16,9 +16,9 @@ main {
   max-width: 1000px;
 }
 
-/* #game {
+#game {
   display: none;
-} */
+}
 
 #container-game {
   background-image: url('.././images/img-game-main.png');
@@ -32,7 +32,7 @@ main {
   max-width: 20%;
   margin-top: 6cm;
   margin-left: 5cm;
-  display: none;
+  /* display: none; */
 }
 
 #start-game:hover {
