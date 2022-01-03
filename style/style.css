@@ -16,9 +16,9 @@ main {
   max-width: 1000px;
 }
 
-#game {
+/* #game {
   display: none;
-}
+} */
 
 #container-game {
   background-image: url('.././images/img-game-main.png');
@@ -32,7 +32,7 @@ main {
   max-width: 20%;
   margin-top: 6cm;
   margin-left: 5cm;
-  /* display: none; */
+  display: none;
 }
 
 #start-game:hover {
@@ -50,13 +50,26 @@ main {
   background-color: rgb(253, 215, 45);
   padding: 8px 5px;
   text-transform: uppercase;
+  font-family: 'Archivo Narrow', sans-serif;
+  font-weight: 800;
+  color:rgb(27, 65, 136);
 }
 
 .input-style:focus {
   outline: none;
 }
 
+.input-style::placeholder {
+  font-size: 7px;
+  font-family: 'Press Start 2P', cursive;
+}
+
+#answer {
+  width: 23%;
+}
+
 #restart {
   width: 100%;
   margin-top: 3.5cm;
+  letter-spacing: 2px;
 }
