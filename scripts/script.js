@@ -20,7 +20,7 @@ addShadow();
 
 // ------------------ Acertou ou Errou --------------------
 send.addEventListener('click', () => {
-  if (answer.value === pokemons[0].name.toLowerCase()) {
+  if (answer.value === pokemons[0].name.toUpperCase()) {
     pokemon.src = pokemons[0].img;
     restartNext.innerText = 'Acertou!! Vamos para o próximo Pokemon?'
   } else {
