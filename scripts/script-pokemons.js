@@ -1,7 +1,7 @@
 const pokemons = [{
   name: 'Eevee',
-  img: '/images/eevee.png',
-  shadow: '/images/eevee-sombra.png',
+  img: 'https://i.postimg.cc/4NNnh4sp/eevee.png',
+  shadow: 'https://i.postimg.cc/pVBpT5b2/eevee-sombra.png',
 },
 {
   name: 'Chimchar',

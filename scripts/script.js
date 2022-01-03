@@ -1,26 +1,25 @@
-// ------------- Botão Go para iniciar o jogo ------------
+// ---------------- constantes globais -------------------
 const startGame = document.getElementById('start-game');
 const sectionGame = document.getElementById('game');
+const pokemon = document.querySelector('#pokemon');
+const answer = document.querySelector('#answer');
+const send = document.querySelector('#send');
 
+// ------------- Botão Go para iniciar o jogo ------------
 startGame.addEventListener('click', () => {
   startGame.style.display = 'none';
   sectionGame.style.display = 'block';
 })
 
-// ------------- Adição da imagem sombra ------------
+// --------------- Adição da imagem sombra ---------------
 function addShadow() {
-  const pokemon = document.querySelector('#pokemon');
-  pokemon.src = 'https://i.postimg.cc/k5t2Xj9Z/minun-sombra.png'
+  pokemon.src = pokemons[0].shadow;
 }
 addShadow();
 
-// ------------- Acertou ou Errou -----------------
-const answer = document.querySelector('#answer');
-const send = document.querySelector('#send');
-
+// ------------------ Acertou ou Errou --------------------
 send.addEventListener('click', () => {
-  if (answer.value === 'Minun'.toLowerCase()) {
-    const pokemon = document.querySelector('#pokemon');
-    pokemon.src = 'https://i.postimg.cc/cHyrKQLJ/minun.png';
+  if (answer.value === pokemons[0].name.toLowerCase()) {
+    pokemon.src = pokemons[0].img;
   }
 })
