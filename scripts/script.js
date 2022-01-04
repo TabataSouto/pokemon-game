@@ -1,32 +1,38 @@
 // ---------------- constantes globais -------------------
-const startGame = document.getElementById('start-game');
-const sectionGame = document.getElementById('game');
+const startGame = document.querySelector('#start-game');
+const sectionGame = document.querySelector('#game');
 const pokemon = document.querySelector('#pokemon');
 const answer = document.querySelector('#answer');
 const send = document.querySelector('#send');
 const restartNext = document.querySelector('#restart');
 
-// ------------- Botão Go para iniciar o jogo ------------
+// Botão "Go" para iniciar o jogo
 startGame.addEventListener('click', () => {
   startGame.style.display = 'none';
   sectionGame.style.display = 'block';
 })
 
-// --------------- Adição da imagem sombra ---------------
+// Imagem de sombra do jogo
 function addShadow() {
-  pokemon.src = pokemons[0].shadow;
+  const randomPokemon = Math.round(Math.random() * 9);
+  pokemon.src = pokemons[randomPokemon].shadow;
 }
 addShadow();
 
-// ------------------ Acertou ou Errou --------------------
+// Função que retorna o resultado do acerto e erro;
 send.addEventListener('click', () => {
-  if (answer.value === pokemons[0].name.toLowerCase()) {
-    pokemon.src = pokemons[0].img;
-    restartNext.innerText = 'Acertou!! Vamos para o próximo Pokémon?'
-  } else {
-    pokemon.src = 'https://i.postimg.cc/GmfBR00G/pokemon-cry.png';
-    pokemon.style.width = '31.8%'
-    restartNext.innerText = 'Errado!! Tente novamente ';
-    restartNext.style.color = 'rgb(209, 19, 19)';
-  }
-})
+  Object.keys(pokemons).forEach((element) => {
+    if (answer.value === pokemons[element].name.toLowerCase()) {
+      pokemon.src = pokemons[element].img;
+      restartNext.innerText = 'Parabéns, você acertou! Vamos para o próximo?'
+    }
+  })
+});
+
+// Tentar outros pokemons
+restartNext.addEventListener('click', () => {
+  answer.value = '';
+  restartNext.innerText = 'Então, qual é o Pokémon?'
+  restartNext.style.color = 'rgb(27, 65, 136)';
+  addShadow();
+});
