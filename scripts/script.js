@@ -5,6 +5,7 @@ const pokemon = document.querySelector('#pokemon');
 const answer = document.querySelector('#answer');
 const send = document.querySelector('#send');
 const restartNext = document.querySelector('#restart');
+const textNamePokemon = document.querySelector('#text')
 
 // Botão "Go" para iniciar o jogo
 startGame.addEventListener('click', () => {
@@ -16,17 +17,13 @@ startGame.addEventListener('click', () => {
 function addShadow() {
   const randomPokemon = Math.round(Math.random() * 9);
   pokemon.src = pokemons[randomPokemon].shadow;
+  textNamePokemon.innerText = pokemons[randomPokemon].name;
 }
 addShadow();
 
-// Função que retorna o resultado do acerto e erro;
+//Função que retorna o resultado do acerto e erro;
 send.addEventListener('click', () => {
-  Object.keys(pokemons).forEach((element) => {
-    if (answer.value === pokemons[element].name.toLowerCase()) {
-      pokemon.src = pokemons[element].img;
-      restartNext.innerText = 'Parabéns, você acertou! Vamos para o próximo?'
-    }
-  })
+  // refazer
 });
 
 // Tentar outros pokemons
